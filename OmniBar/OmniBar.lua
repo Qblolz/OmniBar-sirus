@@ -347,7 +347,6 @@ function OmniBar:Delete(key, keepProfile)
 	bar:UnregisterEvent("ZONE_CHANGED_NEW_AREA")
 	bar:UnregisterEvent("PLAYER_TARGET_CHANGED")
 	bar:UnregisterEvent("PLAYER_REGEN_DISABLED")
-	bar:UnregisterEvent("UPDATE_BATTLEFIELD_SCORE")
 	bar:UnregisterEvent("PLAYER_FOCUS_CHANGED")
 	bar:UnregisterEvent("ARENA_OPPONENT_UPDATE")
 	bar:Hide()
@@ -517,8 +516,6 @@ function OmniBar:Initialize(key, name)
 
 	f:RegisterEvent("PLAYER_FOCUS_CHANGED", "OnEvent")
 	f:RegisterEvent("ARENA_OPPONENT_UPDATE", "OnEvent")
-
-	f:RegisterEvent("UPDATE_BATTLEFIELD_SCORE", "OnEvent")
 
 	table.insert(self.bars, f)
 end
