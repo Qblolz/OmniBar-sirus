@@ -1146,7 +1146,10 @@ function OmniBar_CooldownFinish(self, ...)
 	local cooldown = icon.cooldown
 	local bar = self:GetParent():GetParent()
 
-	if icon.timestamp + icon.duration <= GetTime() then
+	if not icon.timestamp or not icon.duration then
+		OmniBar_StopAnimation(cooldown, icon)
+		OmniBar_StopOnUpdate(icon)
+	elseif icon.timestamp + icon.duration <= GetTime() then
 		OmniBar_StopAnimation(cooldown, icon)
 		OmniBar_StopOnUpdate(icon)
 
@@ -1159,7 +1162,7 @@ function OmniBar_CooldownFinish(self, ...)
 				icon:SetAlpha(bar.settings.unusedAlpha)
 			end
 		end
-
+		
 		bar:StopMovingOrSizing()
 		OmniBar_Position(bar)
 	end
