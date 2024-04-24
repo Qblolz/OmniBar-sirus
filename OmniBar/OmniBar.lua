@@ -836,7 +836,7 @@ function OmniBar:AddSpellCast(event, sourceGUID, sourceName, sourceFlags, spellI
 	end
 
 	-- only track players and their pets
-	if (not ownerName) and bit_band(sourceFlags, COMBATLOG_OBJECT_TYPE_PLAYER) == 0 then return end
+	if (not ownerName) and bit_band(sourceFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == 0 then return end
 
 	-- child doesn't have custom charges, use parent
 	if (not charges) then
@@ -880,7 +880,7 @@ function OmniBar:UNIT_SPELLCAST_SUCCEEDED(event, unit, spellName, rank)
 	local spellID = SPELL_ID_BY_NAME and SPELL_ID_BY_NAME[spellName] or 0
 
 	if class == 'DEATHKNIGHT' and spellID == 6789 then
-		return
+		return;
 	end
 
 	if (not addon.Cooldowns[spellID]) then return end
