@@ -5,7 +5,7 @@
 ## Author: Jordon, Qb
 ## SavedVariables: OmniBarDB
 ## X-Curse-Project-ID: 85814
-## X-Sirus-Update: https://github.com/Qblolz/OmniBar-sirus/tree/master/OmniBar
+## X-Sirus-Update: https://github.com/Qblolz/OmniBar-sirus/tree/main/OmniBar
 
 #@no-lib-strip@
 Libs\LibStub\LibStub.lua
