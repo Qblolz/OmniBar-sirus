@@ -875,7 +875,13 @@ end
 
 -- Needed to track PvP trinkets and possibly other spells that do not show up in COMBAT_LOG_EVENT_UNFILTERED
 function OmniBar:UNIT_SPELLCAST_SUCCEEDED(event, unit, spellName, rank)
+	local _, class = UnitClass(unit);
+
 	local spellID = SPELL_ID_BY_NAME and SPELL_ID_BY_NAME[spellName] or 0
+
+	if class == 'DEATHKNIGHT' and spellID == 6789 then
+		return
+	end
 
 	if (not addon.Cooldowns[spellID]) then return end
 
@@ -1162,7 +1168,7 @@ function OmniBar_CooldownFinish(self, ...)
 				icon:SetAlpha(bar.settings.unusedAlpha)
 			end
 		end
-		
+
 		bar:StopMovingOrSizing()
 		OmniBar_Position(bar)
 	end
