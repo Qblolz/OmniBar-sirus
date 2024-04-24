@@ -40,19 +40,19 @@ addon.Shared = {
         amount = 30
     },
 
-    -- goblin
-    -- {
-    --     triggers = { 316393 },
-    --     spells = { 11578, 20252, 3411, 54786, 49376, 16979, 36554, 1953, 781 },
-    --     amount = 10
-    -- },
-
-    -- -- eredar
-    -- {
-    --     triggers = { 316465 },
-    --     spells = { 11578, 20252, 3411, 54786, 49376, 16979, 36554, 1953, 781 },
-    --     amount = 10
-    -- },
+    ---- goblin
+    --{
+    --    triggers = { 316393 },
+    --    spells = { 11578, 20252, 3411, 54786, 49376, 16979, 36554, 1953, 781 },
+    --    amount = 10
+    --},
+    --
+    ---- eredar
+    --{
+    --    triggers = { 316465 },
+    --    spells = { 11578, 20252, 3411, 54786, 49376, 16979, 36554, 1953, 781 },
+    --    amount = 10
+    --},
 }
 
 addon.Resets = {
@@ -1326,7 +1326,7 @@ addon.Cooldowns = {
 
     --]]
 
-    [20608] = { duration = 1800, class = "SHAMAN" }, -- Reincarnation
+    --[20608] = { duration = 1800, class = "SHAMAN" }, -- Reincarnation
 
     [30823] = { duration = 60, class = "SHAMAN" }, -- Shamanistic Rage
 
