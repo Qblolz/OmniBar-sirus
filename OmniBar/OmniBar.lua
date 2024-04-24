@@ -836,7 +836,7 @@ function OmniBar:AddSpellCast(event, sourceGUID, sourceName, sourceFlags, spellI
 	end
 
 	-- only track players and their pets
-	if (not ownerName) and bit_band(sourceFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == 0 then return end
+	if (not ownerName) and bit_band(sourceFlags, COMBATLOG_OBJECT_TYPE_PLAYER) == 0 then return end
 
 	-- child doesn't have custom charges, use parent
 	if (not charges) then
@@ -899,7 +899,7 @@ function OmniBar:UNIT_SPELLCAST_SUCCEEDED(event, unit, spellName, rank)
 end
 
 function OmniBar:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellID, spellName, ...)
-	if (event == "SPELL_CAST_SUCCESS" or event == "SPELL_AURA_APPLIED") then
+	if (eventType == "SPELL_CAST_SUCCESS" or eventType == "SPELL_AURA_APPLIED") then
 		if spellID == 0 and SPELL_ID_BY_NAME then
 			spellID = SPELL_ID_BY_NAME[spellName]
 		end
