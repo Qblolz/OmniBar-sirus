@@ -673,6 +673,11 @@ function OmniBar_UpdateBorder(self, icon)
 			icon.TargetTexture:SetAlpha(0)
 		end
 	end
+
+	icon:SetAlpha(self.settings.unusedAlpha and
+			not icon.cooldown:IsShown() and
+			(not border) and
+			self.settings.unusedAlpha or 1)
 end
 
 function OmniBar_UpdateAllBorders(self)
@@ -924,17 +929,6 @@ function OmniBar_OnEvent(self, event, ...)
 	elseif event == "UPDATE_BATTLEFIELD_STATUS" then -- IsRatedBattleground() doesn't return valid response until this event
 		if self.disabled or self.zone ~= "pvp" then return end
 		if (not self.rated) and IsRatedBattleground() then OmniBar_SetZone(self) end
-
-	elseif event == "UPDATE_BATTLEFIELD_SCORE" then
-		for i = 1, GetNumBattlefieldScores() do
-			local name, _,_,_,_,_,_,_, classToken, _,_,_,_,_,_, talentSpec = GetBattlefieldScore(i)
-			if name and SPEC_ID_BY_NAME[classToken] and SPEC_ID_BY_NAME[classToken][talentSpec] then
-				if (not self.specs[name]) then
-					self.specs[name] = SPEC_ID_BY_NAME[classToken][talentSpec]
-					self:SendMessage("OmniBar_SpecUpdated", name)
-				end
-			end
-		end
 	elseif event == "ARENA_OPPONENT_UPDATE" then
 		if self.disabled or (not self.settings.showUnused) then return end
 
@@ -1339,7 +1333,7 @@ function OmniBar_AddIcon(self, info)
 
 	if (icon.timestamp) then
 		OmniBar_StartCooldown(self, icon, icon.timestamp)
-		if (GetTime() == icon.timestamp) then OmniBar_StartAnimation(self, icon) end
+		if ((GetTime() - icon.timestamp) < .02) then OmniBar_StartAnimation(self, icon) end
 
 		icon:SetScript('OnUpdate', OmniBar_CooldownFinish)
 	end
