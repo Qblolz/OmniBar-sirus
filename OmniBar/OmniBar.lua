@@ -976,7 +976,7 @@ function OmniBar_OnEvent(self, event, ...)
 
 		-- only add icons if show adaptive is checked
 		if (not self.settings.showUnused) or
-			(not self.settings.adaptive) or
+			(not self.adaptive) or
 			(not UnitIsHostile("target"))
 		then
 			return
@@ -1213,7 +1213,7 @@ function OmniBar_ResetIcons(self)
 
 	if self.settings.showUnused then
 		if self.settings.trackUnit == "ENEMY" then
-			if (not self.settings.adaptive) then
+			if (not self.adaptive) then
 				for spellID,_ in pairs(addon.Cooldowns) do
 					if OmniBar_IsSpellEnabled(self, spellID) then
 						OmniBar_AddIcon(self, { spellID = spellID })
