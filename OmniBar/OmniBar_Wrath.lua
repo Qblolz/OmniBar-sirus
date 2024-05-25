@@ -143,7 +143,7 @@ addon.Cooldowns = {
     [316455] = { duration = 90, class = "GENERAL" },
     [316367] = { duration = 90, class = "GENERAL" },
 
-    [316431] = { duration = 30, class = "GENERAL" },
+    [316431] = { duration = 40, class = "GENERAL" },
     [316161] = { duration = 90, class = "GENERAL" },
     [316465] = { duration = 60, class = "GENERAL" },
     [310810] = { duration = 90, class = "GENERAL" },
