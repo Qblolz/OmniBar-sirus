@@ -121,7 +121,7 @@ addon.Resets = {
 addon.Cooldowns = {
 
     -- General
-    [316418] = { duration = 90, class = "GENERAL" }, -- Arcane Torrent
+    [316418] = { duration = 120, class = "GENERAL" }, -- Arcane Torrent
         [316421] = { parent = 316418 }, -- Arcane Torrent
         [302387] = { parent = 316418 }, -- Arcane Torrent
         [316419] = { parent = 316418 }, -- Arcane Torrent
