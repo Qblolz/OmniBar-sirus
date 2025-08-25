@@ -1,7 +1,7 @@
 ## Interface: 303000
 ## Title: OmniBar
 ## Notes: Tracks enemy cooldowns
-## Version: 14.36.12
+## Version: 14.36.13
 ## Author: Jordon, Qb
 ## SavedVariables: OmniBarDB
 ## X-Curse-Project-ID: 85814
@@ -27,4 +27,5 @@ OmniBar.xml
 OmniBar_Wrath.lua
 OmniBar.lua
 Options.lua
+
 
