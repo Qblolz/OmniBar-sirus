@@ -121,34 +121,28 @@ addon.Resets = {
 addon.Cooldowns = {
 
     -- General
-    [316418] = { duration = 120, class = "GENERAL" }, -- Arcane Torrent
-        [316421] = { parent = 316418 }, -- Arcane Torrent
-        [302387] = { parent = 316418 }, -- Arcane Torrent
-        [316419] = { parent = 316418 }, -- Arcane Torrent
-        [316420] = { parent = 316418 }, -- Arcane Torrent
-    [316386] = { duration = 90, class = "GENERAL" }, -- War Stomp
-    [316231] = { duration = 120, class = "GENERAL" },
-    [316372] = { duration = 90, class = "GENERAL" },
-    [316243] = { duration = 120, class = "GENERAL" },
-    [316254] = { duration = 120, class = "GENERAL" },
-    [316380] = { duration = 120, class = "GENERAL" },
-    [316271] = { duration = 120, class = "GENERAL" },
-    [316405] = { duration = 90, class = "GENERAL" },
-    [316413] = { duration = 90, class = "GENERAL" },
-    [316279] = { duration = 120, class = "GENERAL" },
-    [316393] = { duration = 120, class = "GENERAL" },
-    [316294] = { duration = 90, class = "GENERAL" },
-    [316443] = { duration = 120, class = "GENERAL" },
-    [316289] = { duration = 90, class = "GENERAL" },
-    [316455] = { duration = 90, class = "GENERAL" },
-    [316367] = { duration = 90, class = "GENERAL" },
-
-    [316431] = { duration = 40, class = "GENERAL" },
-    [316161] = { duration = 90, class = "GENERAL" },
-    [316465] = { duration = 60, class = "GENERAL" },
-    [310810] = { duration = 90, class = "GENERAL" },
-    [319322] = { duration = 90, class = "GENERAL" },
-    [320552] = { duration = 120, class = "GENERAL" },
+    [375006] = { duration = 120, class = "GENERAL" }, -- Arcane Torrent
+    [374997] = { duration = 120, class = "GENERAL" }, -- War Stomp
+    [375016] = { duration = 120, class = "GENERAL" },
+    [375035] = { duration = 120, class = "GENERAL" },
+    [375022] = { duration = 120, class = "GENERAL" },
+    [375026] = { duration = 120, class = "GENERAL" },
+    [375040] = { duration = 120, class = "GENERAL" },
+    [375038] = { duration = 120, class = "GENERAL" },
+    [374996] = { duration = 120, class = "GENERAL" },
+    [375018] = { duration = 120, class = "GENERAL" },
+    [375024] = { duration = 120, class = "GENERAL" },
+    [375020] = { duration = 120, class = "GENERAL" },
+    [375019] = { duration = 120, class = "GENERAL" },
+    [374994] = { duration = 120, class = "GENERAL" },
+    [375015] = { duration = 120, class = "GENERAL" },
+    [374999] = { duration = 120, class = "GENERAL" },
+    [374988] = { duration = 120, class = "GENERAL" },
+    [374992] = { duration = 120, class = "GENERAL" },
+    [375001] = { duration = 120, class = "GENERAL" },
+    [375010] = { duration = 120, class = "GENERAL" },
+    [375029] = { duration = 120, class = "GENERAL" },
+    [375013] = { duration = 120, class = "GENERAL" },
 
     [54998] = { duration = 45, class = "GENERAL" }, -- Hand-Mounted Pyro Rocket
 
