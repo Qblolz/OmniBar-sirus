@@ -143,6 +143,7 @@ addon.Cooldowns = {
     [375010] = { duration = 120, class = "GENERAL" },
     [375029] = { duration = 120, class = "GENERAL" },
     [375013] = { duration = 120, class = "GENERAL" },
+    [375033] = { duration = 120, class = "GENERAL" },
 
     [54998] = { duration = 45, class = "GENERAL" }, -- Hand-Mounted Pyro Rocket
 
